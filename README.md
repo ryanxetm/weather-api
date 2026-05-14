@@ -87,19 +87,11 @@ Error responses:
 - The failover API call assumes Australian cities by appending `,AU`.
 - Cached data is stored in memory and resets when the service restarts.
 
-## Build
-
-To create a standalone executable, run:
-
-```powershell
-.\build.ps1
-```
-
-The generated executable will be placed in the `dist\` folder.
-
 ## Future Improvements
 
 - Move API keys to environment variables
 - Add country support for the failover endpoint
 - Add automated tests and better error handling
 - Replace in-memory cache with a persistent cache for multi-instance use
+- Add error response message if the city does not exist
+- Add other countries instead of just AU
