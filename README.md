@@ -16,6 +16,7 @@ This project exposes a simple REST endpoint with primary and failover weather AP
 - Python 3.8+ (or newer)
 - `Flask`
 - `requests`
+- `gunicorn` (optional Render)
 
 ## Installation
 
@@ -50,6 +51,24 @@ python app.py
 ```
 
 The API will start locally at `http://127.0.0.1:5000`.
+
+## (Optional) Deploy in Render
+
+- In `Render` Dashboard > New > Web Service
+- Connect GitHub Repo `https://github.com/ryanxetm/weather-api.git`
+- Config Build Settings, use:
+
+```terminal:
+  pip install -r requirements.txt
+```
+
+- Start Command
+
+```terminal:
+  gunicorn app:app
+```
+
+- Deploy Service
 
 ## API Endpoints
 
