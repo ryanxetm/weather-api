@@ -67,6 +67,12 @@ Example request:
 curl "http://127.0.0.1:5000/weather?city=Sydney"
 ```
 
+The API is deployed in Render, you can access the API using:
+
+```
+https://weather-api-p0af.onrender.com/weather?city=Melbourne
+```
+
 Successful response:
 
 ```json
